@@ -15,7 +15,7 @@ export default class TrelloApp extends HTMLElement {
   subscribeEvents() {
     //when something changes in store re render the app
     store.on("updated", () => {
-      console.log("store updated");
+      //console.log("store updated");
       this.render();
     });
   }

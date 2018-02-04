@@ -15,8 +15,8 @@ import boards from "./mocks/boards.js";
 
 // store.set(JSON.parse(localStorage.getItem("boards")));
 // store.set(JSON.parse(localStorage.getItem("cards")));
-console.log("cards", cards.cards);
-console.log("boards", boards.boards);
+//console.log("cards", cards.cards);
+//console.log("boards", boards.boards);
 store.set("cards", cards.cards);
 store.set("boards", boards.boards);
 customElements.define("trello-app", TrelloApp);

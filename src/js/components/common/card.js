@@ -1,15 +1,13 @@
 import CardAction from "../../actions/card-action.js";
-
 export default class Card extends HTMLElement {
   constructor(p) {
     super();
     this.$shadowRoot = this.attachShadow({ mode: "open" });
-    this.render();
-    window.$card = this.$shadowRoot;
+    this.render();    
     this.subscribeEvents();
   }
   dragged(e) {
-    console.log(e);
+    //console.log(e);
   }
   render() {
     this.$shadowRoot.innerHTML = `
@@ -126,7 +124,6 @@ export default class Card extends HTMLElement {
       });
 
     this.$shadowRoot.querySelector(".textarea").addEventListener("blur", e => {
-      debugger;
       var cardId = e.target.getAttribute("card-id");
       var desc = e.target.innerText;
       document.querySelector("#overlay").style.display = "none";

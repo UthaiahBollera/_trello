@@ -35,7 +35,7 @@ export default class TrelloCanvas extends HTMLElement {
   }
 
   render() {
-    console.log("Trello canvas render called!");
+    //console.log("Trello canvas render called!");
     this.$shadowRoot.innerHTML = `
     <style>
     .add-board{

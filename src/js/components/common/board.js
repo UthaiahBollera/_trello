@@ -48,14 +48,14 @@ export default class TrelloBoard extends HTMLElement {
     this.$shadowRoot.querySelector(".board").addEventListener("drop", ev => {
       let cardId = ev.dataTransfer.getData("text");
       let boardId = ev.target.getAttribute("board-id");
-      console.log(ev.target);
+      //console.log(ev.target);
       cardId &&
         boardId &&
         CardAction.moveCard({
           cardId: cardId,
           boardId: boardId
         });
-      console.log("Sent data ::", cardId, boardId);
+      //console.log("Sent data ::", cardId, boardId);
     });
 
     this.$shadowRoot.querySelector(".board").addEventListener(
@@ -83,7 +83,7 @@ export default class TrelloBoard extends HTMLElement {
   renderCards() {
     let boardId = this.getAttribute("board-id");
     if (boardId) {
-      debugger;
+      
       let cards = (store.get("cards") || []).filter(b => b.board_id == boardId);
       cards.forEach(c => {
         this.cardsHTML += `<trello-card board-id="${this.getAttribute(
@@ -97,7 +97,7 @@ export default class TrelloBoard extends HTMLElement {
   }
 
   render() {
-    console.log("Render card called!!");
+    //console.log("Render card called!!");
     this.$shadowRoot.innerHTML = `<style>    
     .board:hover{
       box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);

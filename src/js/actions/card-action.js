@@ -11,9 +11,7 @@ export default {
     store.dispatch("updated");
   },
   moveCard: function({ cardId, boardId }) {
-    debugger;
     store.get("cards").forEach(c => {
-      debugger;
       if (c.id == cardId) {
         c.board_id = boardId;
         store.dispatch("updated");
@@ -25,7 +23,7 @@ export default {
       var cards = store.get("cards").filter(c => {
         return c.id != cardId;
       });
-      console.log("F cards", cards);
+      //console.log("F cards", cards);
       store.set("cards", cards);
       store.dispatch("updated");
     }
