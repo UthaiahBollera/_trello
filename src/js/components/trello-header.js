@@ -3,7 +3,6 @@ export default class TrelloHeader extends HTMLElement {
     super();
     this.$shadowRoot = this.attachShadow({ mode: "open" });
     this.render();
-    this.subscribeEvents();
   }
   render() {
     this.$shadowRoot.innerHTML = `
