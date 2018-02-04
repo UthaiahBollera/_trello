@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Work+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Rubik" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <title>Trello App</title>
+    <style>
+        html,
+        body {
+            width: 100%;
+            margin: 0;
+            box-sizing: border-box;
+            color: white;
+            position: relative;
+        }
+
+        #overlay {
+            display: none;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            right: 0;
+            z-index: 99;
+            background: #0000008c;
+        }
+
+        }
+    </style>
+    <script type="module" src="/src/js/start.js">                
+    </script>
+</head>
+
+<body>
+    <div id="overlay"></div>
+    <trello-app />
+
+</body>
+
+</html>
