@@ -5,7 +5,6 @@ import store from "../../data.js";
 import CardAction from "../../actions/card-action.js";
 import BoardAction from "../../actions/board-action.js";
 
-window.$boardStore = store;
 export default class TrelloBoard extends HTMLElement {
   constructor(p) {
     super();
@@ -83,7 +82,6 @@ export default class TrelloBoard extends HTMLElement {
   renderCards() {
     let boardId = this.getAttribute("board-id");
     if (boardId) {
-      
       let cards = (store.get("cards") || []).filter(b => b.board_id == boardId);
       cards.forEach(c => {
         this.cardsHTML += `<trello-card board-id="${this.getAttribute(

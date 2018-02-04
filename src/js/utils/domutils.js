@@ -10,7 +10,6 @@ export default {
   getHTML: function(str) {
     var ele = this.createEle();
     ele.innerHTML = str;
-    //console.log(ele);
     return ele.firstChild;
   }
 };

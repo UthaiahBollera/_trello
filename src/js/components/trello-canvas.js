@@ -1,6 +1,6 @@
 import TrelloBoard from "./common/board.js";
 import store from "../data.js";
-import BoardAction from '../actions/board-action.js';
+import BoardAction from "../actions/board-action.js";
 
 export default class TrelloCanvas extends HTMLElement {
   constructor() {
@@ -14,14 +14,11 @@ export default class TrelloCanvas extends HTMLElement {
     this.$shadowRoot
       .querySelector("#add-board")
       .addEventListener("keydown", event => {
-        if (event.which == 13 || event.keyCode == 13) {          
+        if (event.which == 13 || event.keyCode == 13) {
           var header = event.target.value;
-          BoardAction.addBoard({header});
+          BoardAction.addBoard({ header });
         }
       });
-  }
-  attributeChangedCallback() {
-    alert("something changed in TrelloCanvas");
   }
   renderBoards() {
     let boards = store.get("boards") || [];
@@ -35,7 +32,6 @@ export default class TrelloCanvas extends HTMLElement {
   }
 
   render() {
-    //console.log("Trello canvas render called!");
     this.$shadowRoot.innerHTML = `
     <style>
     .add-board{
